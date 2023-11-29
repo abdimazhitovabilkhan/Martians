@@ -2,7 +2,6 @@ cargo_weight = 713
 boxes_found = 0
 total_weight = 0
 
-# Define a function to check if a box is found at a specific kilometer
 def check_box(kilometer, distance_list, weight_list):
     global boxes_found, total_weight
     if kilometer in distance_list:
@@ -17,16 +16,15 @@ def check_box(kilometer, distance_list, weight_list):
 
 # Main loop
 while True:
-    # Initialize lists for kilometer marks and weights
     distance_list = []
     weight_list = []
 
-    # Get input for kilometer marks
+    # input for kilometer marks
     for i in range(3):
         kilometer = int(input(f"Enter kilometer for box {i + 1}: "))
         distance_list.append(kilometer)
 
-    # Get input for weights
+    # input for weights
     for i in range(3):
         weight = int(input(f"Enter weight for box {i + 1}: "))
         weight_list.append(weight)
@@ -45,5 +43,4 @@ while True:
     total_weight = 0
     print("Cargo not fully retrieved. Please try again with updated kilometer marks.")
 
-# Show end message
 print("End of program.")
